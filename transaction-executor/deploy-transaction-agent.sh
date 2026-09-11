@@ -69,6 +69,7 @@ gcloud run deploy transaction-executor \
   --image "${IMAGE_TAG}" \
   --region "$REGION" \
   --project "$PROJECT_ID" \
+  --service-account "apex-sa@${PROJECT_ID}.iam.gserviceaccount.com" \
   --no-invoker-iam-check \
   --min-instances 1 \
   --set-env-vars "GOOGLE_CLOUD_PROJECT=${PROJECT_ID},GEMINI_LOCATION=${GEMINI_LOCATION},BROKER_API_KEY=${DEFAULT_BROKER_KEY},BROKER_API_URL=${DEFAULT_BROKER_URL}" \
